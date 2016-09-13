@@ -11,7 +11,7 @@ public class TestUrl {
     @Test
     public void testUrlApiGithub() {
 
-        String projecUrl = "http://api.github.com/repos/steeve/france.code-civil";
+        String projecUrl = "https://api.github.com/repos/steeve/france.code-civil";
         String title = null;
         logger.debug("Tentative de connexion à l'url : "+projecUrl);
 
