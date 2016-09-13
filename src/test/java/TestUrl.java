@@ -10,17 +10,13 @@ public class TestUrl {
 
     @Test
     public void testUrlApiGithub() {
-
         String projecUrl = "https://api.github.com/repos/steeve/france.code-civil";
         String title = null;
         logger.debug("Tentative de connexion à l'url : "+projecUrl);
 
         try {
-            String json = Request
-                    .Get(projecUrl)
-                    .addHeader("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0")
-                    .addHeader("Host", "api.github.com")
-                    .execute().returnContent().asString();
+            Executor executor = Executor.newInstance();
+            String json = executor.execute(Request.Get(projecUrl)).returnContent().asString();
             logger.info(json);
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
