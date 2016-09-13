@@ -16,7 +16,11 @@ public class TestUrl {
         logger.debug("Tentative de connexion à l'url : "+projecUrl);
 
         try {
-            String json = Request.Get(projecUrl).execute().returnContent().asString();
+            String json = Request
+                    .Get(projecUrl)
+                    .addHeader("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0")
+                    .addHeader("Host", "api.github.com")
+                    .execute().returnContent().asString();
             logger.info(json);
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
