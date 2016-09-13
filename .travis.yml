@@ -14,5 +14,5 @@ before_install:
   - set JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
 script:
-  - curl -i -u firm1:1855d86e2e0e8301b95c0a09973f31e98d560b5f https://api.github.com/repos/steeve/france.code-civil
+  - curl -i -u firm1:bed4cc358230beda8fa84b3cec04bd3c4ffc0c22 https://api.github.com/repos/steeve/france.code-civil
   - ./gradlew check --info
