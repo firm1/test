@@ -1,5 +1,5 @@
 import org.apache.http.client.fluent.Request;
-import org.apache.http.client.fluent.Executor
+import org.apache.http.client.fluent.Executor;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
