@@ -8,19 +8,11 @@ matrix:
       jdk: oraclejdk8
     - os: osx
       osx_image: xcode8
-    - os: osx
-      osx_image: xcode7
-    - os: osx
-      osx_image: xcode6.4
-    - os: osx
-      osx_image: xcode6.3
-    - os: osx
-      osx_image: xcode6.2
 
 before_install:
   - set JAVA_OPTS=-XX:MaxPermSize=1024m -Xmx1512m -Dfile.encoding=UTF-8
   - set JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
 script:
-  - curl -i https://api.github.com/repos/steeve/france.code-civil
+  - curl -i -u firm1:1855d86e2e0e8301b95c0a09973f31e98d560b5f https://api.github.com/repos/steeve/france.code-civil
   - ./gradlew check --info
