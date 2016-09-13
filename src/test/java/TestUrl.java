@@ -36,7 +36,7 @@ public class TestUrl {
 
         try {
             String json = Request.Get(projecUrl).execute().returnContent().asString();
-            logger.info(json);
+            //logger.info(json);
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
@@ -51,9 +51,9 @@ public class TestUrl {
 
         try {
             String json = Request.Get(projecUrl).execute().returnContent().asString();
-            logger.info(json);
+            //logger.info(json);
         } catch (IOException e) {
-            logger.error(e.getMessage(), e);
+            //logger.error(e.getMessage(), e);
         }
     }
 }
